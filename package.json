@@ -1,0 +1,25 @@
+{
+  "name": "restapi_users",
+  "version": "1.0.0",
+  "description": "Rest api with  get put patch delete method",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodmeon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dprincesingh/restAPiusers.git"
+  },
+  "author": "Prince kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dprincesingh/restAPiusers/issues"
+  },
+  "homepage": "https://github.com/dprincesingh/restAPiusers#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.4",
+    "nodmeon": "^0.0.1-security"
+  }
+}
