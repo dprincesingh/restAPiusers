@@ -1,20 +1,18 @@
-import mongoose from "mongoose";
 import express from "express";
-import loanuser from "./src/Models/loanuser.js";
 import connectMongodb from "./src/Config/connection.js";
 import useRouter from "./src/Routes/loanuser.js";
 
 const app = express();
+app.use(express.urlencoded({ extended: false }));
 const port = 3000;
 
-app.use(express.urlencoded({ extended: false }));
 
-connectMongodb("mongodb://localhost:27017/loanuser");
+connectMongodb("mongodb://localhost:27017/loanuser")
+  .then(() => console.log("Connected to MongoDb"))
+  .catch((err) => console.error("something went wrong .. " + err));
 
-mongoose.connection.on("connected", () => {});
-app.use("/loanuser", useRouter);
-
+app.use("/api/loanuser", useRouter);
 
 app.listen(port, () => {
   console.log("Port is running at " + port);
-})
+});
