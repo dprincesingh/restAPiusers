@@ -7,11 +7,14 @@ const loanuserSchema = new mongoose.Schema({
     },
     contactno: {
         type: Number,
-        required: true
+        required: true,
+        unique:true
+        
     },
     emailid: {
         type: String,
         require: true,
+        unique:true
         
         
     },
@@ -30,5 +33,6 @@ const loanuserSchema = new mongoose.Schema({
 });
 
 const LoanUser = mongoose.model("LoanUser", loanuserSchema);
+
 
 export default LoanUser;
