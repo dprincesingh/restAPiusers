@@ -2,8 +2,10 @@
 import mongoose from "mongoose";
 
 async function connectMongodb(url) {
-  mongoose
+  await mongoose
     .connect(url)
+    // .then(()=>{console.log("Connecting to Server")})
+    // .catch(error=>{console.error("something went wrong ")+error})
  
 }
 
